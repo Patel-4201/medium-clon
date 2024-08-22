@@ -5,14 +5,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+// MARK: general
 body {
   background-color: #f7f4ed;
   font: {
     family: "sohne", sans-serif;
   }
 }
-
-// MARK: general.style
 a {
   text-decoration: none;
   color: inherit;
@@ -25,9 +25,10 @@ a {
   border: none;
 }
 .container {
-  max-width: 1100px;
+  max-width: 90%;
   margin: 0 auto;
 }
+
 // MARK: header
 header {
   border-bottom: 1px solid black;
@@ -47,15 +48,16 @@ header {
     align-items: center;
   }
 }
-@media screen and (max-width: 720px) {
-  .sm-hidden {
-    display: none;
-  }
-}
+
+
 // MARK: main
 main {
-  background-color: orange;
-  // min-height: 90vh;
+  background: {
+    image: url(../image/img.webp);
+    size: contain;
+    repeat: no-repeat;
+    position: 70vw;
+  }
   .container {
     min-height: 80vh;
     display: flex;
@@ -67,7 +69,7 @@ main {
   h1 {
     font: {
       family: "GT super", serif;
-      size: 110px;
+      size: calc(10vw + 10px);
       weight: 400;
     }
     line-height: 0.9;
@@ -79,10 +81,47 @@ main {
     font-size: 22px;
   }
 }
+
+//MARK: footer
+footer {
+  padding: 20px;
+  border-top: 1px solid black;
+  nav {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+}
+
+//MARK: media screen
+@media screen and (max-width: 720px) {
+  .sm-hidden {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+   .weird-hidden {
+    display: none;
+   }
+}
+
 @media screen and (max-width: 900px) {
   main {
     .btn {
       background: #1a8917;
     }
   }
+  footer {
+    background: black;
+    color: white;
+
+    nav {
+      justify-content: start;
+    }
+    .lg-hidden {
+      display: none;
+    }
+  }
 }
+
