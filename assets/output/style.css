@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "GT Super";
+  src: url(../fonts/gt-super-400-normal.woff);
+}
+@font-face {
+  font-family: "sohne";
+  src: url(../fonts/sohne-400-normal.woff);
+}
 * {
   margin: 0;
   padding: 0;
